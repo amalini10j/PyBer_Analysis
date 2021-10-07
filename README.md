@@ -1,116 +1,41 @@
 # PyBer_Analysis
 Repository for ride sharing analysis
-## Overview of school district Analysis
 
-Creating visualizations of rideshare data for PyBer to help improve access to ride-sharing services and determine affordability for underserved neighborhoods. As a new employee, this is a huge professional opportunity for you!
+## Overview of ride sharing Analysis
 
-The first step is to make sure you have the right tools in place. A simple Excel chart isn't going to impress V. Isualize. Instead, you'll use the Python graphing library Matplotlib, which is a favorite tool among data scientists and data analysts because of its robust visualization features.
+Creating visualizations of ride share data for PyBer to help improve access to ride-sharing services and determine affordability for underserved neighborhoods. 
 
-Omar has given you some backstory about the connection between V. Isualize and Matplotlib. Matplotlib was created as a Python alternative for MATLAB. MATLAB, which is short for matrix laboratory, was developed by the company MathWorks in the 1980s. It enabled scientists to perform linear algebra and numerical analysis without learning the programming language Fortran, which until then had been the best option for complex computations.
-
-With this information, you realize that the CEO is an expert in creating data visualizations. You definitely can't afford to botch this up!
-
-The metrics that will aid in decision making are as follows:
-- Top 5 and bottom 5 performing schools, based on the overall passing rate
-- The average math score received by students in each grade level at each school
-- The average reading score received by students in each grade level at each school
-- School performance based on the budget per student
-- School performance based on the school size 
-- School performance based on the type of school
+The metrics that will aid in the data analysis of the ride sharing data are as follows:
+- Total Rides for each city type
+- Total Drivers for each city type
+- Total Fares for each city type
+- Average Fare per Ride for each city type
+- Average Fare per Driver for each city type
 
 ## Resources
-**Data Source:** schools_complete.csv , students_complete.csv
+**Data Source:** city_data.csv , ride_data.csv
 **Software:** Python 3.8, Visual Studio Code 1.59
 
-## School District Data Analysis Results
+## Ride-sharing Data Analysis Results
 
-**How is the district summary affected?**
+**How does the ride sharing data look like for different city types - urban, suburban and rural?**
 
-The district summary of the original dataset is as follows:
-![Original](/Images/DistrictSummary_Original.png)
+The ride sharing metrics for different city types is as follows:
+![RideSharing](/Images/RideShare_DataFrame.png)
 
-The district summary of the dataset after replacement for Thomas School data by NaN is as follows:
-![Modified](/Images/DistrictSummary_AfterReplacement.png)
+The Average Fare per Ride and Average Fare per Driver is highest in rural areas. Additional effort is required to increase the affordability and accessibility of ride share in rural areas.
 
-Except for the % Passing Reading score all other scores reduced in the summary calculated after data replacement for Thomas School
+**What is the weekly outlook of total fares for each city type ?**
+The weekly total fares is as shown in the graph below:
+![WeeklyTotals](/analysis/PyBer_fare_summary.png)
 
-**How is the school summary affected?**
-The school summary of the original dataset is as follows:
-![Original_School_Summary](/Images/SchoolSummary_Original.png)
+The weekly totals is highest for urban cities and lowest for rural areas.
 
-The school summary of the modified dataset is as follows:
-![Modified_School_Summary](/Images/SchoolSummary_AfterReplacement.png)
+## Ride sharing Data Analysis Summary
+The recommendations based on the ride sharing data analysis are as follows:
 
-The Average Math score and Average Reading score came down marginally for Thomas school but the % Passing Score for Math, reading and Overall came down significantly
-
-**How does replacing the ninth graders’ math and reading scores affect Thomas High School’s performance relative to the other schools?**
-
-Refer to the images in the point above. The Average Math score and Average Reading score came down marginally for Thomas school but the % Passing Score for Math, reading and Overall came down significantly from ~90% to ~65%
-
-****How does replacing the ninth-grade scores affect the following:**
-**Math and reading scores by grade****
-The math and reading scores for 9th graders for Thomas High school is NaN. Other data  remains the same. Refer to the screen shots below. The first one is the result with the replaced dataset and the second one is the result with the original dataset.
-
-Reading scores based on the replaced dataset:
-
-![Replaced_Reading](/Images/ReadingScore_Replaced.png)
-
-Math scores based on the replaced dataset:
-
-![Replaced_Math](/Images/MathScore_Replaced.png)
-
-Reading scores based on the original dataset:
-
-![Original_Reading](/Images/ReadingScore_Original.png)
-
-Math scores based on the original dataset:
-
-![Original_Math](/Images/MathScore_Original.png)
-
-**Scores by school spending**
-Refer to screen shots below:
-
-The % Passing reading and % Overall Passing was lower in the replaced dataset for the spending range of 630 - 644 USD
-
-Scores by School spending based on original dataset:
-
-![Original_Scores](/Images/Score_BySchoolSpending_Original.png)
-
-Scores by School spending based on replaced dataset:
-
-![Replaced_Scores](/Images/Score_BySchoolSpending_Replaced.png)
-
-**Scores by school size**
-
-The % Passing reading and % Overall Passing was lower in the replaced dataset for the medium size school (1000 to 2000 students)
-
-Scores by School size based on original dataset:
-
-![Original_Scores](/Images/Score_BySize_Original.png)
-
-Scores by School spending based on replaced dataset:
-
-![Replaced_Scores](/Images/Score_BySize_Replaced.png)
-
-**Scores by school type**
-
-The % Passing reading and % Overall Passing was lower in the replaced dataset for the Charter schools and remained unchanged for district schools
-
-Scores by School type based on original dataset:
-
-![Original_Scores](/Images/Score_ByType_Original.png)
-
-Scores by School type based on replaced dataset:
-
-![Replaced_Scores](/Images/Score_ByType_Replaced.png)
-
-
-## School Data Analysis Summary
-The four changes in the updated school district analysis after reading and math scores for the ninth grade at Thomas High School have been replaced with NaNs are as follows:
-
-1. The % Passing Score for reading and % Overall Passing score got reduced for the Charter schools
-2. The % Passing Score for reading and % Overall Passing score got reduced for the medium sized schools (having 1000 to 2000 students)
-3. % Passing Score for reading and % Overall Passing score got reduced for the schools having spending of 630 to 644 USD per student
-4. The Math and Reading scores for Thomas High School got reduced
+1. The rural cities need more driver support as the average fare per driver is highest
+2. The rural cities need more cars too as the average fare per ride is the highest
+3. There is also high disparity in the average fare per driver and average fare per ride between urban and suburban cities. It would be good to try and increase the drivers and cars in suburban cities too in reduce the disparity in cost and availability.
 
 
